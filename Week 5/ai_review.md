@@ -144,4 +144,11 @@ Part G)
 Ai suggestion. Classification. Reason 
 Scope says staff can update appointment information, but Fr-08 only updates status. Accepted. The scope and FR-08 do not match.
 Staff should be able to search for a patient information. Accepted. Staff have difficutly finding patient information
-It is unclear 
+It is unclear if practitioners will directly use the system. Unverified. It is not stated
+Duplicate booking rules need clarification for overlapping times. Unverified. Double booking is mentioned but does not explain the overlapping time.
+Appointment status values needs to be defined. Unverified. Inconsistent statuses are mentioned but gives no status values.
+The amount of appointment history needs clarification. Unverified. limited history is mentioned but gives no specific amount 
+The two second response time is an assumption. Modified. Response time target is not given so its provisional 
+Access to patient information needs clarification. Unverified. User permissions or access levels are not given
+User Story 1 had an incorrect linked requirement. Accepted. Fr-03 is about practitioner records, not patient information.
+A negative scenario should be included for duplicate bookings. Accepted. Duplicate bookings are identified as a problem in the brief.

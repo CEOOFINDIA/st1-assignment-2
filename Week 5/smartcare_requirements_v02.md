@@ -14,8 +14,7 @@ Allow staff to find patient information more easily
 Prevent duplicate appointments
 Provide a appointment history so previous appointments can be viewed 
 Allow staff to update appointment information
-Control access point to patient information
-Out of scope)
+Control access to patient informationOut of scope
 Online patient booking 
 Patient mobile app
 Automated sms and email reminders
@@ -32,10 +31,11 @@ Fr-06: The system shall prevent two appointments being booked at the same time w
 Fr-07: The system shall allow staff to view appointment details, including the patient, practitioner, date, time and appointment status.
 Fr-08: The system shall allow staff to update an appointment's status using the status values defined by the system.
 Fr-09: The system shall record each appointment in the patient's appointment history
+Fr-10: The system shall allow staff to search for a patient record
 
 Part D)
 NRF-01: The system shall display a requested patient, practitioner or appointment record within 2 seconds
-NRF-02: The system shall require to log in before they can access their information
+NRF-02: The system shall require users to log in before they can access patient information.
 NRF-03: The system shall prevent unauthorised users from modifying patient, practitioner or appointment records
 NRF-04: The system shall maintain consistent appointment status information so that an appointment only has one current status at a time
 NRF-05: The system shall preserve stored patient, practitioner and appointment records when the system is closed and reopened.
@@ -43,7 +43,7 @@ NRF-05: The system shall preserve stored patient, practitioner and appointment r
 Part E)
 User Story 1 - Finding Patient information
 Story: As a staff member, I want to search for an view a patients appointment information, so that I can find the correct information needed to manage the appointment 
-Linked requirements: Fr-01, Fr-02, Fr-03
+Linked requirements: Fr-01, Fr-02, Fr-10
 Scenario: Patient records exist
 Given a patient record exists in the system, when the staff member searches for and selects the patient. Then the system displays the patient's stored information.
 
@@ -64,3 +64,28 @@ Story: As a staff member, I want to update an appointment status,so that staff a
 Linked requirements: Fr-08
 Scenario: Appointment status is updated
 Given an appointment exists in the system, when the staff member selects a valid appointment status. Then the system saves the appointment with the selected status.
+
+Part H)
+Assumptions
+A system administrator role is needed to maintain the system. Staff will use the system to manage patient, practitioner and appointment records. The two second response time is a provisional target. Login and access controls are required, but the exact permissions are not yet confirmed.
+
+Open questions for the client
+Which appointment status values should the system use?
+What counts as an overlapping appointment?
+Should cancelled appointments block that time slot?
+How much appointment history should be stored and displayed?
+Who should be able to view and modify patient information?
+Should practitioners use the system directly?
+Should staff be able to change an appointment's date, time or practitioner?
+Should existing spreadsheet and paper records be transferred into the new system?
+Should the two second response time be used as the performance target?
+
+Selected Ai review evidence
+The AI review identified several issues that were checked against the client brief and requirements.
+The scope said staff could update appointment information, but FR-08 only covered appointment status. Accepted.
+The need for patient searching was supported by the brief, which says staff have difficulty finding patient information. Accepted.
+Practitioner system use was unclear in the brief. Unverified.
+Appointment overlap rules, appointment status values and appointment history length were not defined in the brief. Unverified.
+The  two second response time was an assumption, so it was kept as provisional. Modified.
+User Story 1 had an incorrect FR link, which was corrected. Accepted.
+A negative duplicate-booking scenario was added because duplicate bookings are directly identified as a problem in the brief. Accepted.
